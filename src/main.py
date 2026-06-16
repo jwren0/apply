@@ -76,12 +76,12 @@ def main() -> None:
     run_link  = getenv("GIT_RUN_LINK")
 
     payload = json.dumps({
-        "timestamp": gettime(),
-        "name": name,
-        "email": email,
-        "resume_link": cv_link,
-        "repository_link": repo_link,
         "action_run_link": run_link,
+        "email": email,
+        "name": name,
+        "repository_link": repo_link,
+        "resume_link": cv_link,
+        "timestamp": gettime(),
     }, separators=(",", ":"))
 
     headers = {
