@@ -35,7 +35,7 @@ def getenv(var: str) -> str:
         perror(f"{var} is unset")
         exit(1)
 
-    return val
+    return val.strip()
 
 def gettime() -> str:
     """
